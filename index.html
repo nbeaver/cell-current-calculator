@@ -14,57 +14,62 @@
             <tr>
                 <td>Electrode total mass</td>
                 <td>mg</td>
-                <td><input type="text"></td>
+                <td><input id="mass_electrode" type="number" min="0" step="0.1" ></td>
             </tr>
             <tr>
                 <td>Current collector mass</td>
                 <td>mg</td>
-                <td><input type="text"></td>
+                <td><input id="mass_current_collector" type="number" min="0" step="0.1" ></td>
             </tr>
             <tr>
                 <td>Percent active material</td>
                 <td>mass %</td>
-                <td><input type="text"></td>
+                <td><input id="percent_active_material" type="number" min="0" max="100" step="0.1" ></td>
             </tr>
             <tr>
                 <td>Percent carbon</td>
                 <td>mass %</td>
-                <td><input type="text"></td>
+                <td><input id="percent_carbon" type="number" min="0" max="100" step=0.1 ></td>
             </tr>
             <tr>
                 <td>Active material mass</td>
                 <td>mg</td>
-                <td><input type="text"></td>
+                <td><output id="mass_active_material" for="mass_electrode mass_current_collector percent_active_material" ></td>
+            </tr>
+            <tr>
+                <td>Carbon mass</td>
+                <td>mg</td>
+                <td><output id="mass_carbon" for="mass_electrode mass_current_collector percent_carbon" ></td>
             </tr>
             <tr>
                 <td>Active material capacity</td>
                 <td>mAh/g</td>
-                <td><input type="text"></td>
+                <td><input id="capacity_active_material" type="number" min="0" step="0.1" ></td>
             </tr>
             <tr>
                 <td>Carbon capacity</td>
                 <td>mAh/g</td>
-                <td><input type="text"></td>
+                <td><input id="capacity_carbon" type="number" min="0" value="372" ></td>
             </tr>
             <tr>
-                <td>Ideal charge time</td>
+                <td>Expected charge time</td>
                 <td>hours</td>
-                <td><input type="text"></td>
+                <td><input id="hours_charge_time" type="number" min="0" ></td>
             </tr>
             <tr>
                 <td>Active material current</td>
                 <td>mA</td>
-                <td><input type="text"></td>
+                <td><output id="mA_active_material" for="mass_active_material capacity_active_material hours_charge_time" ></td>
             </tr>
             <tr>
                 <td>Carbon current</td>
                 <td>mA</td>
-                <td><input type="text"></td>
+                <td><output id="mA_carbon" for="mass_carbon capacity_carbon hours_charge_time" ></td>
             </tr>
             <tr>
                 <td>Total current</td>
                 <td>mA</td>
-                <td><input type="text"></td>
+                <td><output id="mA_total" for="mA_active_material mA_carbon" ></td>
             </tr>
         </table>
     </body>
