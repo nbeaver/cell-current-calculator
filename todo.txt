@@ -1,6 +1,9 @@
 Now:
-- Use table layout or div layout?
-- Put units in a separate column
+
+- Make accessing table contents more uniform,
+  so that iterating over the table to write CSV output is easier.
 
 Later:
-- Use a radio box to choose which quantity to calculate, and back-calculate from the known quantities.
+
+- Use a radio box to choose which quantity to calculate,
+  and back-calculate from the known quantities.
