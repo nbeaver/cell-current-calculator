@@ -17,6 +17,7 @@ Required input:
 Output:
 
 - Required current (in mA).
+- CSV download of all fields.
 
 Optional input:
 
