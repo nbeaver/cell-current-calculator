@@ -22,10 +22,51 @@ function calculate_current() {
     document.getElementById("mA_total").value = mA_total;
 }
 
+function table_to_csv(table) {
+    var table_string = "";
+    var row_delimiter = "\n";
+    var column_delimiter = ",";
+    // http://stackoverflow.com/a/3065389/1608986
+    for (var i=0, row; row=table.rows[i]; i++) {
+        for (var j=0, col; col=row.cells[j]; j++) {
+            if (j < row.cells.length - 1) {
+                table_string += col.textContent + column_delimiter;
+            }
+            else {
+                // Last item in row.
+                if (col.childElementCount > 0) {
+                    table_string += col.children[0].value;
+                }
+                else {
+                    table_string += col.textContent;
+                }
+            }
+        }
+        if (i < table.rows.length - 1) {
+            table_string += row_delimiter;
+        }
+    }
+    return table_string;
+}
+
+function download_csv() {
+    var table = document.getElementById("calculator_table");
+    var tempAnchor = window.document.createElement('a');
+    CSVBlob = new Blob([table_to_csv(table)], {type: 'text/csv'});
+    tempAnchor.href = window.URL.createObjectURL(CSVBlob);
+    tempAnchor.download = 'current_calculations.csv';
+    tempAnchor.style.display = 'none';
+    document.body.appendChild(tempAnchor);
+    tempAnchor.click();
+    document.body.removeChild(tempAnchor);
+}
+
 window.onload = function() {
+    calculate_current();
     var input_ids = new Array("mg_electrode", "mg_current_collector", "percent_active_material", "percent_carbon", "mg_carbon", "capacity_active_material", "capacity_carbon", "hours_charge_time");
     var i;
     for (i=0; i<input_ids.length; i++) {
         document.getElementById(input_ids[i]).addEventListener('input', calculate_current);
     }
+    document.getElementById("download_csv_button").addEventListener('click', download_csv);
 }
