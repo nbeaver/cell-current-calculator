@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Cell current calculator.</title>
+        <script type="text/javascript" src="current_calculator.js"></script>
     </head>
     <body>
         <table>
@@ -14,12 +15,12 @@
             <tr>
                 <td>Electrode total mass</td>
                 <td>mg</td>
-                <td><input id="mass_electrode" type="number" min="0" step="0.1" ></td>
+                <td><input id="mg_electrode" type="number" min="0" step="0.1" ></td>
             </tr>
             <tr>
                 <td>Current collector mass</td>
                 <td>mg</td>
-                <td><input id="mass_current_collector" type="number" min="0" step="0.1" ></td>
+                <td><input id="mg_current_collector" type="number" min="0" step="0.1" ></td>
             </tr>
             <tr>
                 <td>Percent active material</td>
@@ -34,12 +35,12 @@
             <tr>
                 <td>Active material mass</td>
                 <td>mg</td>
-                <td><output id="mass_active_material" for="mass_electrode mass_current_collector percent_active_material" ></td>
+                <td><output id="mg_active_material" for="mg_electrode mg_current_collector percent_active_material" ></td>
             </tr>
             <tr>
                 <td>Carbon mass</td>
                 <td>mg</td>
-                <td><output id="mass_carbon" for="mass_electrode mass_current_collector percent_carbon" ></td>
+                <td><output id="mg_carbon" for="mg_electrode mg_current_collector percent_carbon" ></td>
             </tr>
             <tr>
                 <td>Active material capacity</td>
@@ -54,17 +55,17 @@
             <tr>
                 <td>Expected charge time</td>
                 <td>hours</td>
-                <td><input id="hours_charge_time" type="number" min="0" ></td>
+                <td><input id="hours_charge_time" type="number" min="0" step=0.1 ></td>
             </tr>
             <tr>
                 <td>Active material current</td>
                 <td>mA</td>
-                <td><output id="mA_active_material" for="mass_active_material capacity_active_material hours_charge_time" ></td>
+                <td><output id="mA_active_material" for="mg_active_material capacity_active_material hours_charge_time" ></td>
             </tr>
             <tr>
                 <td>Carbon current</td>
                 <td>mA</td>
-                <td><output id="mA_carbon" for="mass_carbon capacity_carbon hours_charge_time" ></td>
+                <td><output id="mA_carbon" for="mg_carbon capacity_carbon hours_charge_time" ></td>
             </tr>
             <tr>
                 <td>Total current</td>
