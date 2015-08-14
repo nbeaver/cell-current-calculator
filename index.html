@@ -23,6 +23,11 @@
                 <td><input id="mg_current_collector" type="number" min="0" step="0.1" ></td>
             </tr>
             <tr>
+                <td>Laminate mass</td>
+                <td>mg</td>
+                <td><output id="mg_laminate" for="mg_electrode mg_current_collector" ></td>
+            </tr>
+            <tr>
                 <td>Percent active material</td>
                 <td>mass %</td>
                 <td><input id="percent_active_material" type="number" min="0" max="100" step="0.1" ></td>
@@ -35,12 +40,12 @@
             <tr>
                 <td>Active material mass</td>
                 <td>mg</td>
-                <td><output id="mg_active_material" for="mg_electrode mg_current_collector percent_active_material" ></td>
+                <td><output id="mg_active_material" for="mg_laminate percent_active_material" ></td>
             </tr>
             <tr>
                 <td>Carbon mass</td>
                 <td>mg</td>
-                <td><output id="mg_carbon" for="mg_electrode mg_current_collector percent_carbon" ></td>
+                <td><output id="mg_carbon" for="mg_laminate percent_carbon" ></td>
             </tr>
             <tr>
                 <td>Active material capacity</td>

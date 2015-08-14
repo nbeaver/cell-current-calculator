@@ -8,9 +8,11 @@ function calculate_current() {
     var capacity_carbon = parseFloat(document.getElementById("capacity_carbon").value);
     var hours_charge_time = parseFloat(document.getElementById("hours_charge_time").value);
 
-    var mg_active_material = (mg_electrode - mg_current_collector) * (percent_active_material/100.0);
+    var mg_laminate = (mg_electrode - mg_current_collector);
+    document.getElementById("mg_laminate").value = mg_laminate;
+    var mg_active_material = mg_laminate * (percent_active_material/100.0);
     document.getElementById("mg_active_material").value = mg_active_material;
-    var mg_carbon = (mg_electrode - mg_current_collector) * (percent_carbon/100.0);
+    var mg_carbon = mg_laminate * (percent_carbon/100.0);
     document.getElementById("mg_carbon").value = mg_carbon;
 
     const A_to_mA = 1.0/1000.0;
