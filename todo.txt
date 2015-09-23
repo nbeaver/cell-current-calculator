@@ -3,6 +3,8 @@ Now:
 - Make accessing table contents more uniform,
   so that iterating over the table to write CSV output is easier.
 
+- Add a "cycles" input and "total time in hours" output.
+
 Later:
 
 - Use a radio box to choose which quantity to calculate,
