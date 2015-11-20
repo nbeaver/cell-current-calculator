@@ -1,5 +1,7 @@
 Now:
 
+- [ ] Add an input box for the filename.
+
 - [ ] Make accessing table contents more uniform,
   so that iterating over the table to write CSV output is easier.
 
