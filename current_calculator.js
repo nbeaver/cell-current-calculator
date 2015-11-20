@@ -56,7 +56,7 @@ function download_csv() {
     var tempAnchor = window.document.createElement('a');
     CSVBlob = new Blob([table_to_csv(table)], {type: 'text/csv'});
     tempAnchor.href = window.URL.createObjectURL(CSVBlob);
-    tempAnchor.download = 'current_calculations.csv';
+    tempAnchor.download = document.getElementById("csv_filename").value;
     tempAnchor.style.display = 'none';
     document.body.appendChild(tempAnchor);
     tempAnchor.click();
