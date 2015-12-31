@@ -22,4 +22,4 @@ Output:
 Optional input:
 
 - Percent carbon by mass.
-
+- Electrode area.

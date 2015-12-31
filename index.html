@@ -83,6 +83,26 @@
                 <td>mA</td>
                 <td><output id="mA_total" for="mA_active_material mA_carbon" ></td>
             </tr>
+            <tr>
+                <td>Electrode area</td>
+                <td>cm<sup>2</sup></td>
+                <td><input id="electrode_area" type="number" min="0" step="0.001" ></td>
+            </tr>
+            <tr>
+                <td>Current density (active)</td>
+                <td>mA/cm<sup>2</sup></td>
+                <td><output id="current_density_active" for="mA_active_material electrode_area" ></td>
+            </tr>
+            <tr>
+                <td>Current density (carbon)</td>
+                <td>mA/cm<sup>2</sup></td>
+                <td><output id="current_density_carbon" for="mA_carbon electrode_area" ></td>
+            </tr>
+            <tr>
+                <td>Current density (total)</td>
+                <td>mA/cm<sup>2</sup></td>
+                <td><output id="current_density_total" for="mA_total electrode_area" ></td>
+            </tr>
         </table>
         <button id="download_csv_button">Download CSV</button>
     </body>

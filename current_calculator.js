@@ -7,6 +7,7 @@ function calculate_current() {
     var capacity_active_material = parseFloat(document.getElementById("capacity_active_material").value);
     var capacity_carbon = parseFloat(document.getElementById("capacity_carbon").value);
     var hours_charge_time = parseFloat(document.getElementById("hours_charge_time").value);
+    var electrode_area = parseFloat(document.getElementById("electrode_area").value);
 
     var mg_laminate = (mg_electrode - mg_current_collector);
     document.getElementById("mg_laminate").value = mg_laminate;
@@ -25,6 +26,10 @@ function calculate_current() {
     document.getElementById("mA_carbon").value = mA_carbon;
     var mA_total = mA_active_material + mA_carbon;
     document.getElementById("mA_total").value = mA_total;
+
+    document.getElementById("current_density_active").value = mA_active_material/electrode_area;
+    document.getElementById("current_density_carbon").value = mA_carbon/electrode_area;
+    document.getElementById("current_density_total").value = mA_total/electrode_area;
 }
 
 function table_to_csv(table) {
@@ -68,7 +73,7 @@ function download_csv() {
 
 window.onload = function() {
     calculate_current();
-    var input_ids = new Array("mg_electrode", "mg_current_collector", "percent_active_material", "percent_carbon", "mg_carbon", "capacity_active_material", "capacity_carbon", "hours_charge_time");
+    var input_ids = new Array("mg_electrode", "mg_current_collector", "percent_active_material", "percent_carbon", "mg_carbon", "capacity_active_material", "capacity_carbon", "hours_charge_time", "electrode_area");
     var i;
     for (i=0; i<input_ids.length; i++) {
         document.getElementById(input_ids[i]).addEventListener('input', calculate_current);
