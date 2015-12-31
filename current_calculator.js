@@ -16,8 +16,11 @@ function calculate_current() {
     document.getElementById("mg_carbon").value = mg_carbon;
 
     const A_to_mA = 1.0/1000.0;
+    const mg_to_g = 1.0/1000.0;
     var mA_active_material = A_to_mA * capacity_active_material * mg_active_material / hours_charge_time;
     document.getElementById("mA_active_material").value = mA_active_material;
+    var mA_per_g_active_material = mA_active_material / (mg_active_material * mg_to_g);
+    document.getElementById("mA_per_g_active_material").value = mA_per_g_active_material;
     var mA_carbon = A_to_mA * capacity_carbon * mg_carbon / hours_charge_time;
     document.getElementById("mA_carbon").value = mA_carbon;
     var mA_total = mA_active_material + mA_carbon;

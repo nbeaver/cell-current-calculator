@@ -1,5 +1,7 @@
 Now:
 
+- [x] Add an output field for specific current.
+
 - [x] Add an input box for the filename.
 
 - [ ] Make accessing table contents more uniform,
