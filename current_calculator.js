@@ -27,8 +27,8 @@ function calculate_current() {
     var mA_total = mA_active_material + mA_carbon;
     document.getElementById("mA_total").value = mA_total;
 
-    document.getElementById("mass_loading_laminate").value = mg_active_material/electrode_area;
-    document.getElementById("mass_loading_active").value = mg_laminate/electrode_area;
+    document.getElementById("mass_loading_laminate").value = mg_laminate/electrode_area;
+    document.getElementById("mass_loading_active").value = mg_active_material/electrode_area;
     document.getElementById("current_density_active").value = mA_active_material/electrode_area;
     document.getElementById("current_density_carbon").value = mA_carbon/electrode_area;
     document.getElementById("current_density_total").value = mA_total/electrode_area;
