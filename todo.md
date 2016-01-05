@@ -1,5 +1,7 @@
 Now:
 
+- [x] Add an output field for loading density.
+
 - [x] Add an input field for electrode area to calculate current density.
 
 - [x] Add an output field for specific current.
