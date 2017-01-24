@@ -54,7 +54,7 @@ function table_to_csv(table) {
                 }
             }
         }
-        if (i < table.rows.length - 1) {
+        if (i < table.rows.length) {
             table_string += row_delimiter;
         }
     }
