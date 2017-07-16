@@ -17,6 +17,8 @@ Now:
 
 - [ ] Use '\t' as delimiter instead of ',' for locales that use comma for decimal separator.
 
+- [ ] Add a date and timestamp field
+
 Later:
 
 - [ ] Use a radio box to choose which quantity to calculate,
